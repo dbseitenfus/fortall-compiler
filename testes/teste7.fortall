@@ -1,0 +1,49 @@
+programa media_aluno;
+var
+  nota1, nota2, media : inteiro;
+  aprovado : logico;
+
+inicio
+  ler(nota1, nota2);
+
+  se nota1 > 0 entao
+  inicio
+    se nota1 <= 100 entao
+    inicio
+      se nota2 > 0 entao
+      inicio
+        se nota2 <= 100 entao
+        inicio
+          media := (nota1 + nota2) / 2;
+          
+          se media >= 70 entao
+            aprovado := 1
+          senao
+            aprovado := 0;
+
+          escrever("Média calculada: ", media);
+
+          se aprovado entao
+            escrever("Aluno aprovado!")
+          senao
+            escrever("Aluno reprovado.");
+
+          enquanto media < 70 faca
+            inicio
+              media := media + 1;
+              escrever("Ajustando média para: ", media);
+            fim;
+        fim
+        senao
+          escrever("nota2 deve ser menor ou igual a 100");
+      fim
+      senao
+        escrever("nota2 deve ser maior que 0");
+    fim
+    senao
+      escrever("nota1 deve ser menor ou igual a 100");
+  fim
+  senao
+    escrever("nota1 deve ser maior que 0");
+
+fim.
