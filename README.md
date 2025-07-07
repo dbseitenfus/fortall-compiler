@@ -1,11 +1,5 @@
 # Compilador Fortall
 
-**Autor:** Daniel Brenner Seitenfus  
-**Disciplina:** Compiladores  
-**Curso:** Ciência da Computação - UFSM  
-
----
-
 ## 1. INTRODUÇÃO
 
 Este documento apresenta detalhes da implementação do trabalho final de Compiladores, como a gramática criada, os passos para instalação das ferramentas para a execução do código e detalhes na implementação realizada para a linguagem Fortall. A linguagem possui comandos de declaração, atribuição, leitura, escrita, estrutura condicional, laços de repetição e expressões aritméticas e lógicas. O compilador foi implementado em Python 3.9+, utilizando as bibliotecas PLY (Python Lex-Yacc) para análise léxica e sintática.
