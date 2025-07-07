@@ -1,0 +1,4 @@
+programa exemplo;
+inicio
+  escrever("Texto sem fechar);
+fim.
