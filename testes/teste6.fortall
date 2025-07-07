@@ -1,0 +1,9 @@
+programa exemplo;
+var x : logico;
+inicio
+  x := 0;
+  se x entao
+    escrever("verdadeiro")
+  senao
+    escrever("falso");
+fim.
