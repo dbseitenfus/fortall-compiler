@@ -1,0 +1,4 @@
+programa exemplo;
+var x : inteiro;
+inicio
+  x := 5;
