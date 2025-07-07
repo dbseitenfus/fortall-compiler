@@ -1,0 +1,6 @@
+programa exemplo1;
+var x : inteiro;
+inicio
+  x := 10;
+  escrever(x);
+fim.
