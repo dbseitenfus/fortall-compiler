@@ -1,0 +1,9 @@
+programa exemplo4;
+var x : inteiro;
+inicio
+  x := 2;
+  se x >= 0 entao
+    escrever('x é não-negativo')
+  senao
+    escrever('x é negativo');
+fim.
