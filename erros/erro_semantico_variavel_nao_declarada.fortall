@@ -1,0 +1,4 @@
+programa exemplo;
+inicio
+  y := 10;
+fim.
