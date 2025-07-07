@@ -1,0 +1,7 @@
+programa exemplo3;
+var x : inteiro;
+inicio
+  x := 5;
+  se x > 0 entao
+    escrever('x é positivo');
+fim.
