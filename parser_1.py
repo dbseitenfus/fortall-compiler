@@ -259,11 +259,9 @@ def executar(node):
         tipo_expr = inferir_tipo(node.expr)
         
         valor = avaliar(node.expr)
-        
 
         if tipo_var != tipo_expr and not (tipo_var == 'logico' and (valor == 0 or valor == 1)):
             raise Exception(f"[Erro Semântico] Atribuição incompatível: '{tipo_var}' ← '{tipo_expr}'")
-
         
         mem[node.var] = valor
 
@@ -279,9 +277,9 @@ def executar(node):
                 if tipo == 'inteiro':
                     mem[var] = int(entrada)
                 elif tipo == 'logico':
-                    if entrada.lower() in ['verdadeiro', 'true']:
+                    if entrada.lower() == '1':
                         mem[var] = True
-                    elif entrada.lower() in ['falso', 'false']:
+                    elif entrada.lower() == '0':
                         mem[var] = False
                     else:
                         raise Exception()
