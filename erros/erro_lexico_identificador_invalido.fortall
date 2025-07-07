@@ -1,0 +1,5 @@
+programa exemplo;
+var 2x : inteiro;
+inicio
+  2x := 5;
+fim.
