@@ -1,0 +1,6 @@
+programa exemplo;
+var x : logico;
+inicio
+  x := (-1 + 2) * 3;
+  escrever(x);
+fim.
