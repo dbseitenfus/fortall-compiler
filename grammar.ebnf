@@ -1,0 +1,53 @@
+(* Gramática da linguagem Fortall *)
+
+prog        = "programa" id ";" [ declaracoes ] "inicio" lista_comandos "fim" "." ; 
+
+declaracoes = "var" lista_ids ":" tipo ";" { lista_ids ":" tipo ";" } ;
+
+lista_ids   = id { "," id } ;
+
+tipo        = "inteiro" | "logico" ;
+
+lista_comandos = comando ";" { comando ";" } ;
+
+comando     = atribuicao 
+            | leitura 
+            | escrita 
+            | composto 
+            | condicional 
+            | repeticao ;
+
+atribuicao  = id ":=" expr ;
+
+leitura     = "ler" "(" lista_ids ")" | "ler" [ "(" lista_ids ")" ] ;
+
+escrita     = "escrever" "(" stringvar { "," stringvar } ")" | "escrever" [ "(" stringvar { "," stringvar } ")" ] ;
+
+composto    = "inicio" lista_comandos "fim" ";" ;
+
+condicional = "se" exprLogico "entao" comando [ "senao" comando ] ;
+
+repeticao   = "enquanto" exprLogico "faca" comando ;
+
+expr        = fator expr_tail ;
+
+expr_tail   = "+" fator expr_tail 
+            | "-" fator expr_tail
+            | "*" fator expr_tail
+            | "/" fator expr_tail
+            | ;
+
+fator = "-" fator 
+      | "(" expr ")"
+      | id 
+      | num ;
+
+exprLogico  = expr "<" expr 
+            | expr "<=" expr
+            | expr ">" expr
+            | expr ">=" expr
+            | expr "=" expr
+            | expr "<>" expr
+            | id ;
+
+stringvar = str | expr ;
