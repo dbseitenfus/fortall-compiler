@@ -1,0 +1,7 @@
+programa exemplo2;
+var idade : inteiro;
+inicio
+  escrever('Digite sua idade:');
+  ler(idade);
+  escrever('Idade digitada:', idade);
+fim.
