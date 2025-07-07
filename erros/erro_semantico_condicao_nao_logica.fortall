@@ -1,0 +1,5 @@
+programa exemplo;
+var x : inteiro;
+inicio
+  se 10 entao x := 1;
+fim.
